@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aplikasi Belajar</title>
+  <meta name="description" content="Ringkas PPT dosen, lalu latihan soal sebanyak-banyaknya.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+  <!-- Pustaka: baca PPTX (JSZip), baca PDF (pdf.js), render Markdown (marked + DOMPurify) -->
+  <script src="lib/jszip.min.js"></script>
+  <script src="lib/pdf.min.js"></script>
+  <script src="lib/marked.min.js"></script>
+  <script src="lib/purify.min.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a href="#/" class="brand">📚 Belajar</a>
+    <nav>
+      <a href="#/" data-nav="home">Beranda</a>
+      <a href="#/latihan" data-nav="latihan">Latihan</a>
+      <a href="#/backup" data-nav="backup">Backup</a>
+    </nav>
+  </header>
+  <main id="app"></main>
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Tutup">✕</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+  <div id="toast" class="toast hidden"></div>
+  <script src="app.js"></script>
+</body>
+</html>
